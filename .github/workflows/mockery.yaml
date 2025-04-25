@@ -1,0 +1,19 @@
+{
+  "name": "json-ci",
+  "on": {
+    "schedule": [
+      { "cron": "0 0 * * 0" }
+    ]
+  },
+  "jobs": {
+    "build": {
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        { "uses": "actions/checkout@v4" },
+        {
+          "run": "echo '${{ github.actor }} will never forgive these sins!'"
+        }
+      ]
+    }
+  }
+}
